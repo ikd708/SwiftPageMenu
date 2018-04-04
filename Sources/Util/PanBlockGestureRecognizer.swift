@@ -34,7 +34,7 @@ class PanBlockGestureRecognizer: UIPanGestureRecognizer {
         self.delegate = self.panBlockGestureRecognizerDelegate
     }
 
-    func performAction(sender: UIGestureRecognizer) {
+    @objc func performAction(sender: UIGestureRecognizer) {
         guard let panGesture = sender as? UIPanGestureRecognizer else { return }
         let state = panGesture.state
         let panLocation = panGesture.location(in: self.inView)
